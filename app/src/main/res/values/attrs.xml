@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="passwordBoxColor" format="reference|color" />
+    <attr name="inputBoxColor" format="reference|color" />
+    <attr name="addSubButtonColorActive" format="reference|color" />
+    <attr name="addSubButtonColorInactive" format="reference|color" />
+    <declare-styleable name="AppWidgetAttrs">
+        <attr name="appWidgetBackgroundColor" format="color" />
+        <attr name="appWidgetTextColor" format="color" />
+    </declare-styleable>
+</resources>

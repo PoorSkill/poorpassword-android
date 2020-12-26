@@ -1,0 +1,70 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/application_header">
+
+        <ListPreference
+            app:defaultValue="@string/lightThemeKey"
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_values"
+            app:key="@string/themeKey"
+            app:title="@string/appTheme"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="@string/languageKey"
+            app:title="@string/languageTitle"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="@string/prefAutoGeneratePasswordByChangeKey"
+            app:summary="@string/preferencesAutoGeneratePasswordByChangeSummary"
+            app:title="@string/preferencesAutoGeneratePasswordByChangeTitle" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/character_header">
+
+        <EditTextPreference
+            app:defaultValue="@string/defaultIncludeChars"
+            app:key="@string/prefCustomDefaultIncludeCharsKey"
+            app:title="@string/defaultIncludeSymbols"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="@string/prefUseCustomIncludeCharKey"
+            app:summary="@string/preferencesUseCustomIncludeCharactersAsDefaultSummary"
+            app:title="@string/preferencesUseCustomIncludeCharactersAsDefaultTitle" />
+
+        <EditTextPreference
+            app:key="@string/prefCustomDefaultExcludeCharsKey"
+            app:title="@string/defaultExcludeSymbols"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="@string/prefUseCustomExcludeCharKey"
+            app:summary="@string/preferencesUseCustomExcludeCharactersAsDefaultSummary"
+            app:title="@string/preferencesUseCustomExcludeCharactersAsDefaultTitle" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/password_header">
+
+        <ListPreference
+            app:defaultValue="128"
+            app:key="@string/prefMinBitForStrongKey"
+            app:title="@string/preferencesMinBitStrengthTitle"
+            app:entries="@array/minBit_entries"
+            app:entryValues="@array/minBit_values"
+            app:useSimpleSummaryProvider="true" />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

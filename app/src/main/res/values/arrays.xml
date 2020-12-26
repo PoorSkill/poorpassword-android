@@ -1,0 +1,94 @@
+<resources>
+    <!-- Theme Preference -->
+    <string-array name="theme_entries">
+        <item>@string/light</item>
+        <item>@string/dark</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>@string/lightThemeKey</item>
+        <item>@string/darkThemeKey</item>
+    </string-array>
+
+    <!-- Language Preference -->
+    <string-array name="language_entries">
+        <item>@string/german</item>
+        <item>@string/english</item>
+        <item>@string/afrikaans</item>
+        <item>@string/arabic</item>
+        <item>@string/bengali</item>
+        <item>@string/bulgarian</item>
+        <item>@string/chinese</item>
+        <item>@string/croatian</item>
+        <item>@string/french</item>
+        <item>@string/hindi</item>
+        <item>@string/italian</item>
+        <item>@string/japanese</item>
+        <item>@string/javanese</item>
+        <item>@string/portuguese</item>
+        <item>@string/russian</item>
+        <item>@string/sundanese</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>@string/germanKey</item>
+        <item>@string/englishKey</item>
+        <item>@string/afrikaansKey</item>
+        <item>@string/arabicKey</item>
+        <item>@string/bengaliKey</item>
+        <item>@string/bulgarianKey</item>
+        <item>@string/chineseKey</item>
+        <item>@string/croatianKey</item>
+        <item>@string/frenchKey</item>
+        <item>@string/hindiKey</item>
+        <item>@string/italianKey</item>
+        <item>@string/japaneseKey</item>
+        <item>@string/javaneseKey</item>
+        <item>@string/portugueseKey</item>
+        <item>@string/russianKey</item>
+        <item>@string/sundaneseKey</item>
+    </string-array>
+
+    <!-- MinBitStrength Preference -->
+    <string-array name="minBit_entries">
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>40</item>
+        <item>64</item>
+        <item>80</item>
+        <item>96</item>
+        <item>128</item>
+        <item>160</item>
+        <item>192</item>
+        <item>224</item>
+        <item>256</item>
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+        <item>4096</item>
+        <item>8192</item>
+    </string-array>
+
+    <string-array name="minBit_values">
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>40</item>
+        <item>64</item>
+        <item>80</item>
+        <item>96</item>
+        <item>128</item>
+        <item>160</item>
+        <item>192</item>
+        <item>224</item>
+        <item>256</item>
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+        <item>4096</item>
+        <item>8192</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name" translatable="false">PoorPassword</string>
+    <string name="distinct">Distinct</string>
+    <string name="symbols">Include:</string>
+    <string name="numbers">Numbers</string>
+    <string name="uppercase">Uppercase</string>
+    <string name="length">Length:</string>
+    <string name="lowercase">Lowercase</string>
+    <string name="passwords">Passwords:</string>
+    <string name="exclude">Exclude:</string>
+    <string name="generate_password_button">Generate Password</string>
+    <string name="space">Space</string>
+    <string name="resetSymbols">Reset symbols to default</string>
+    <string name="aboutItem">About</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="copyToClipboard">Copy to clipboard</string>
+    <string name="allPasswordsCopiedToClipboard">Passwords copied to clipboard</string>
+    <string name="passwordsClipboardEmpty">No Password Copied</string>
+    <string name="singlePasswordClipboard">Password copied to clipboard</string>
+    <string name="strengthWeak">Weak</string>
+    <string name="strengthReasonable">Reasonable</string>
+    <string name="strengthStrong">Strong</string>
+    <string name="strengthVeryStrong">Very Strong</string>
+    <string name="bits" translatable="false">bits</string>
+
+    <!-- Action Menu  -->
+    <string name="settingsItem">Settings</string>
+
+    <!-- Value -->
+    <string name="defaultIncludeChars" translatable="false">!\"#$%()*+,-./:;\\=\\>?@[]^_`{|}~</string>
+    <string name="lowerCaseCharacter" translatable="false">abcdefghijklmnopqrstuvwxyz</string>
+    <string name="upperCaseCharacter" translatable="false">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="numbersChars" translatable="false">0123456789</string>
+    <!-- About -->
+    <string name="copyrightAntonKesy" translatable="false">© Anton Kesy</string>
+    <string name="poorskillWebsite" translatable="false">https://www.poorskill.com</string>
+    <string name="privacyPolicyURL" translatable="false">https://github.com/PoorSkill/PRIVAT_poorpassword-android/blob/main/store/privacy%20policy/privacy_policy.md</string>
+    <string name="sourceCodeURL" translatable="false">https://github.com/PoorSkill/poorpassword-android</string>
+    <string name="reportBugURL" translatable="false">https://github.com/PoorSkill/poorpassword-android/issues</string>
+    <string name="rateAppURL" translatable="false">https://play.google.com/store/apps/details?id=com.poorskill.poorpassword</string>
+    <string name="contactMail" translatable="false">info@poorskill.com</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Sync Preferences -->
+    <string name="character_header">Character</string>
+    <string name="defaultIncludeSymbols">Default include symbols</string>
+    <string name="defaultExcludeSymbols">Default exclude characters</string>
+    <string name="appTheme">App Theme</string>
+
+    <!-- Pref Keys -->
+    <string name="themeKey" translatable="false">theme_key</string>
+    <string name="lightThemeKey" translatable="false">light_theme_key</string>
+    <string name="darkThemeKey" translatable="false">dark_theme_key</string>
+    <string name="preferencesDefaultIncludeCharsKey" translatable="false">perf_default_include_key</string>
+    <string name="resetCustomCharsButtonKey" translatable="false">reset_custom_key</string>
+    <string name="preferencesDefaultExcludeCharsKey" translatable="false">pref_exclude_chars_key</string>
+    <string name="preferencesUseCustomIncludeCharactersAsDefaultKey" translatable="false">pref_use_custom_as_default_key</string>
+    <string name="preferencesUseCustomIncludeCharactersAsDefaultTitle">Use custom as default</string>
+    <string name="preferencesUseCustomIncludeCharactersAsDefaultSummary">Use custom character inputs as default values</string>
+    <string name="preferencesUseCustomExcludeCharactersAsDefaultKey" translatable="false">pref_use_custom_exclude_key</string>
+    <string name="preferencesUseCustomExcludeCharactersAsDefaultSummary">Use custom exclude character</string>
+    <string name="preferencesUseCustomExcludeCharactersAsDefaultTitle">Use custom exclude characters as default values</string>
+
+
+    <string name="prefUseCustomIncludeCharKey" translatable="false">pref_use_custom_include_key</string>
+    <string name="prefCustomDefaultExcludeCharsKey" translatable="false">prefCustomDefaultExcludeCharsKey</string>
+    <string name="prefCustomDefaultIncludeCharsKey" translatable="false">prefCustomDefaultIncludeCharsKey</string>
+    <string name="prefAppThemeKey" translatable="false">prefAppThemeKey</string>
+    <string name="prefPasswordLengthKey" translatable="false">prefPasswordLengthKey</string>
+    <string name="prefPasswordCountKey" translatable="false">prefPasswordCountKey</string>
+    <string name="prefLocalExcludeCharsKey" translatable="false">prefLocalExcludeCharsKey</string>
+    <string name="prefLocalIncludeCharsKey" translatable="false">prefLocalIncludeCharsKey</string>
+    <string name="prefIsExcludeCharsKey" translatable="false">prefIsExcludeCharsKey</string>
+    <string name="prefIsDistinctCharsKey" translatable="false">prefIsDistinctCharsKey</string>
+    <string name="prefIsSpaceInCharsKey" translatable="false">prefIsSpaceInCharsKey</string>
+    <string name="prefIsIncludeCharsKey" translatable="false">prefIsIncludeCharsKey</string>
+    <string name="prefIsNumberInCharsKey" translatable="false">prefIsNumberInCharsKey</string>
+    <string name="prefIsUpperCaseInCharsKey" translatable="false">prefIsUpperCaseInCharsKey</string>
+    <string name="prefIsLowerCaseInCharsKey" translatable="false">prefIsLowerCaseInCharsKey</string>
+    <string name="prefUseCustomExcludeCharKey" translatable="false">prefUseCustomExcludeCharKey</string>
+    <string name="helpItem">Help</string>
+    <string name="application_header">Application</string>
+    <string name="strengthVeryWeak">Very Weak</string>
+    <string name="goBack">Go Back</string>
+    <string name="minus" translatable="false">−</string>
+    <string name="plus" translatable="false">+</string>
+    <string name="excludeHint">Enter characters to excluded</string>
+    <string name="includeHint">Enter characters to include</string>
+    <string name="prefMinBitForStrongKey" translatable="false">preMinBitStrengthKey</string>
+    <string name="preferencesMinBitStrengthTitle">Minimum Bit for strength</string>
+    <string name="password_header">Password</string>
+    <string name="languageKey" translatable="false">languageKey</string>
+    <string name="languageTitle">Language</string>
+
+    <string name="german">German</string>
+    <string name="english">English</string>
+    <string name="afrikaans" translatable="false">Afrikaans*</string>
+    <string name="arabic" translatable="false">Arabic*</string>
+    <string name="bengali" translatable="false">Bengali*</string>
+    <string name="bulgarian" translatable="false">Bulgarian*</string>
+    <string name="chinese" translatable="false">Chinese*</string>
+    <string name="croatian" translatable="false">Croatian*</string>
+    <string name="french" translatable="false">French*</string>
+    <string name="hindi" translatable="false">Hindi*</string>
+    <string name="italian" translatable="false">Italian*</string>
+    <string name="japanese" translatable="false">Japanese*</string>
+    <string name="javanese" translatable="false">Javanese*</string>
+    <string name="portuguese" translatable="false">Portuguese*</string>
+    <string name="russian" translatable="false">Russian*</string>
+    <string name="sundanese" translatable="false">Sundanese*</string>
+
+
+    <string name="germanKey" translatable="false">de</string>
+    <string name="englishKey" translatable="false">en</string>
+    <string name="afrikaansKey" translatable="false">af</string>
+    <string name="arabicKey" translatable="false">ar</string>
+    <string name="bengaliKey" translatable="false">bn</string>
+    <string name="bulgarianKey" translatable="false">bg</string>
+    <string name="chineseKey" translatable="false">zh</string>
+    <string name="croatianKey" translatable="false">hr</string>
+    <string name="frenchKey" translatable="false">fr</string>
+    <string name="hindiKey" translatable="false">hi</string>
+    <string name="italianKey" translatable="false">it</string>
+    <string name="japaneseKey" translatable="false">ja</string>
+    <string name="javaneseKey" translatable="false">jv</string>
+    <string name="portugueseKey" translatable="false">pt</string>
+    <string name="russianKey" translatable="false">ru</string>
+    <string name="sundaneseKey" translatable="false">su</string>
+
+    <string name="prefAutoGeneratePasswordByChangeKey" translatable="false">prefAutoGeneratePasswordByChange</string>
+    <string name="preferencesAutoGeneratePasswordByChangeSummary">"Passwords automatically generate when settings are changed "</string>
+    <string name="preferencesAutoGeneratePasswordByChangeTitle">Auto generate passwords</string>
+
+    <!-- Shortcut -->
+    <string name="generate_shortcut_disable_message">Shortcut not available</string>
+    <string name="generate_shortcut_long_label" translatable="false">PoorPasswordGenerator</string>
+    <string name="generate_shortcut_short_label">Password</string>
+
+    <string name="settings_shortcut_long_label">PoorPassword Settings</string>
+    <string name="settings_shortcut_short_label">Settings</string>
+    <string name="shareTitle">Share to:</string>
+    <string name="strengthBitEnd" translatable="false">" bits)"</string>
+    <string name="strengthBitStart" translatable="false">" ("</string>
+
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+</resources>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="4sp"
+        android:paddingRight="4sp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/inputCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10sp"
+            app:cardBackgroundColor="?inputBoxColor"
+            app:cardCornerRadius="10dp">
+
+
+            <LinearLayout
+                android:id="@+id/expandableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:paddingBottom="30sp"
+                android:paddingTop="5sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:paddingTop="5sp">
+
+                    <CheckBox
+                        android:id="@+id/lowercaseSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:text="@string/lowercase" />
+
+                    <CheckBox
+                        android:id="@+id/uppercaseSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:text="@string/uppercase" />
+
+                    <CheckBox
+                        android:id="@+id/numbersSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:text="@string/numbers" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/symbolsSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/symbols"
+                        tools:ignore="NestedWeights" />
+
+                    <EditText
+                        android:id="@+id/usableSymbols"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="2"
+                        android:hint="@string/includeHint"
+                        android:importantForAutofill="no"
+                        android:inputType="textNoSuggestions"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/excludeCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/exclude"
+                        tools:ignore="NestedWeights" />
+
+                    <EditText
+                        android:id="@+id/excludeInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="@string/excludeHint"
+                        android:importantForAutofill="no"
+                        android:inputType="textNoSuggestions"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/spaceCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/space" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:labelFor="@+id/passwordCountInput"
+                            android:paddingEnd="2sp"
+                            android:text="@string/passwords" />
+
+                        <EditText
+                            android:id="@+id/passwordCountInput"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="2"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            tools:ignore="TextFields" />
+
+
+                        <Button
+                            android:id="@+id/subPasswordBtn"
+                            style="@style/sub_button" />
+
+                        <Button
+                            android:id="@+id/addPasswordBtn"
+                            style="@style/add_button" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/distinctSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/distinct" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:labelFor="@+id/passwordLengthInput"
+                            android:paddingEnd="2sp"
+                            android:text="@string/length" />
+
+                        <EditText
+                            android:id="@+id/passwordLengthInput"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="2"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:lines="1" />
+
+
+                        <Button
+                            android:id="@+id/subLengthBtn"
+                            style="@style/sub_button" />
+
+                        <Button
+                            android:id="@+id/addLengthBtn"
+                            style="@style/add_button" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/expandInputButton"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|bottom"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_baseline_keyboard_arrow_up_24"
+                android:scaleType="fitCenter" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingTop="15sp"
+            android:paddingBottom="20sp">
+
+            <Button
+                android:id="@+id/generatePasswordBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:text="@string/generate_password_button"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/copyToClipboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/copyToClipboard"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="10sp">
+
+            <ListView
+                android:id="@+id/password_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="20.0sp"
+                android:paddingLeft="2sp"
+                android:paddingRight="2sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

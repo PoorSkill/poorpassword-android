@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="LightThemeBase" parent="Theme.AppCompat.Light">
+        <item name="passwordBoxColor">#EDEDED</item>
+        <item name="inputBoxColor">#EDEDED</item>
+        <item name="addSubButtonColorInactive">#DDDDDD</item>
+        <item name="addSubButtonColorActive">#B5B5B5</item>
+    </style>
+
+    <style name="DarkThemeBase" parent="Theme.AppCompat">
+        <item name="passwordBoxColor">#202020</item>
+        <item name="inputBoxColor">#1B1B1B</item>
+        <item name="addSubButtonColorInactive">#292929</item>
+        <item name="addSubButtonColorActive">#757575</item>
+        <item name="android:statusBarColor">#222222</item>
+    </style>
+
+    <style name="ThemeOverlay.PoorPassword.AppWidgetContainer" parent="">
+        <item name="appWidgetBackgroundColor">@color/light_blue_600</item>
+        <item name="appWidgetTextColor">@color/light_blue_50</item>
+    </style>
+
+</resources>
