@@ -1,4 +1,4 @@
-# PRIVAT_poorpassword-android
+# poorpassword-android
 
 Modifiable Password Generator for Android
 
@@ -7,7 +7,7 @@ Weekend Project turned out to be a four-weekend-project because of the amount of
 
 ## Table of Contents
 
-- [PRIVAT_poorpassword-android](#privat_poorpassword-android)
+- [poorpassword-android](#poorpassword-android)
   - [Table of Contents](#table-of-contents)
   - [Background](#background)
   - [Screenshots](#screenshots)
