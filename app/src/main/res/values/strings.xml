@@ -108,6 +108,10 @@
     <string name="portuguese" translatable="false">Portuguese*</string>
     <string name="russian" translatable="false">Russian*</string>
     <string name="sundanese" translatable="false">Sundanese*</string>
+    <string name="wolof" translatable="false">Wolof*</string>
+    <string name="danish" translatable="false">Danish*</string>
+    <string name="dutch" translatable="false">Dutch*</string>
+    <string name="serbian" translatable="false">Serbian*</string>
 
 
     <string name="germanKey" translatable="false">de</string>
@@ -126,6 +130,10 @@
     <string name="portugueseKey" translatable="false">pt</string>
     <string name="russianKey" translatable="false">ru</string>
     <string name="sundaneseKey" translatable="false">su</string>
+    <string name="wolofKey" translatable="false">wo</string>
+    <string name="danishKey" translatable="false">da</string>
+    <string name="dutchKey" translatable="false">nl</string>
+    <string name="serbianKey" translatable="false">sr</string>
 
     <string name="prefAutoGeneratePasswordByChangeKey" translatable="false">prefAutoGeneratePasswordByChange</string>
     <string name="preferencesAutoGeneratePasswordByChangeSummary">"Passwords automatically generate when settings are changed "</string>

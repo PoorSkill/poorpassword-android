@@ -20,6 +20,8 @@
         <item>@string/bulgarian</item>
         <item>@string/chinese</item>
         <item>@string/croatian</item>
+        <item>@string/danish</item>
+        <item>@string/dutch</item>
         <item>@string/french</item>
         <item>@string/hindi</item>
         <item>@string/italian</item>
@@ -27,7 +29,9 @@
         <item>@string/javanese</item>
         <item>@string/portuguese</item>
         <item>@string/russian</item>
+        <item>@string/serbian</item>
         <item>@string/sundanese</item>
+        <item>@string/wolof</item>
     </string-array>
 
     <string-array name="language_values">
@@ -39,6 +43,8 @@
         <item>@string/bulgarianKey</item>
         <item>@string/chineseKey</item>
         <item>@string/croatianKey</item>
+        <item>@string/danishKey</item>
+        <item>@string/dutchKey</item>
         <item>@string/frenchKey</item>
         <item>@string/hindiKey</item>
         <item>@string/italianKey</item>
@@ -46,7 +52,9 @@
         <item>@string/javaneseKey</item>
         <item>@string/portugueseKey</item>
         <item>@string/russianKey</item>
+        <item>@string/serbianKey</item>
         <item>@string/sundaneseKey</item>
+        <item>@string/wolofKey</item>
     </string-array>
 
     <!-- MinBitStrength Preference -->
