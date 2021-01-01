@@ -22,7 +22,8 @@ class AboutActivity : BaseActivity() {
         setContentView(R.layout.activity_about)
 
         //Update Version Code
-        findViewById<TextView>(R.id.versionCodeAbout).text = (this.packageManager.getPackageInfo(packageName, 0).versionName).toString()
+        findViewById<TextView>(R.id.versionCodeAbout).text =
+            (this.packageManager.getPackageInfo(packageName, 0).versionName).toString()
         //Define Buttons
         val websiteButton = findViewById<Button>(R.id.websiteButton)
         val privacyPolicyButton = findViewById<Button>(R.id.privacyPolicyButton)
@@ -38,8 +39,8 @@ class AboutActivity : BaseActivity() {
         privacyPolicyButton.setOnLongClickListener { copyURLToClipboard(this.getString(R.string.privacyPolicyURL)) }
         contactButton.setOnClickListener {
             openMail(
-                    this.getString(R.string.contactMail),
-                    this.getString(R.string.app_name)
+                this.getString(R.string.contactMail),
+                this.getString(R.string.app_name)
             )
         }
         contactButton.setOnLongClickListener { copyURLToClipboard(this.getString(R.string.contactMail)) }
@@ -93,7 +94,7 @@ class AboutActivity : BaseActivity() {
      */
     private fun copyURLToClipboard(url: String): Boolean {
         val clipboard: ClipboardManager =
-                getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clip = ClipData.newPlainText(android.R.attr.label.toString(), url)
         clipboard.setPrimaryClip(clip)
         Toast.makeText(this, url, Toast.LENGTH_SHORT).show()

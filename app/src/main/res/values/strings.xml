@@ -34,7 +34,7 @@
     <!-- About -->
     <string name="copyrightAntonKesy" translatable="false">© Anton Kesy</string>
     <string name="poorskillWebsite" translatable="false">https://www.poorskill.com</string>
-    <string name="privacyPolicyURL" translatable="false">https://github.com/PoorSkill/PRIVAT_poorpassword-android/blob/main/store/privacy%20policy/privacy_policy.md</string>
+    <string name="privacyPolicyURL" translatable="false">https://github.com/PoorSkill/poorpassword-android/blob/main/store/privacy%20policy/privacy_policy.md</string>
     <string name="sourceCodeURL" translatable="false">https://github.com/PoorSkill/poorpassword-android</string>
     <string name="reportBugURL" translatable="false">https://github.com/PoorSkill/poorpassword-android/issues</string>
     <string name="rateAppURL" translatable="false">https://play.google.com/store/apps/details?id=com.poorskill.poorpassword</string>
