@@ -3,7 +3,6 @@ package com.poorskill.poorpassword
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
-import android.content.res.Configuration
 import androidx.preference.PreferenceManager
 import java.util.*
 
@@ -241,6 +240,12 @@ abstract class PlayerPreferences {
             resources.updateConfiguration(config, resources.displayMetrics)
         }
 
+        internal fun isLimitCountAndLength(context: Context): Boolean {
+            return getSharedPreferences(context).getBoolean(
+                context.getString(R.string.prefLimitCountAndLengthKey),
+                true
+            )
+        }
 
     }
 }

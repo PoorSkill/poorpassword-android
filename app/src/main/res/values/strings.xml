@@ -152,4 +152,7 @@
 
     <string name="light">Light</string>
     <string name="dark">Dark</string>
+    <string name="preferencesLimitCountAndLengthTitle">Limit amount and length of passwords</string>
+    <string name="preferencesLimitCountAndLengthSummary">Prevents user of using high amount of passwords or length to prevent crash</string>
+    <string name="prefLimitCountAndLengthKey">prefLimitCountAndLengthKey</string>
 </resources>

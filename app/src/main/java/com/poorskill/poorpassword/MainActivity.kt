@@ -1,12 +1,14 @@
 package com.poorskill.poorpassword
 
 import android.R.attr.label
+import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.transition.*
+import android.transition.AutoTransition
+import android.transition.TransitionManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -14,7 +16,6 @@ import android.view.WindowManager
 import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.core.widget.addTextChangedListener
-import kotlin.collections.ArrayList
 
 
 class MainActivity : BaseActivity() {
@@ -84,19 +85,21 @@ class MainActivity : BaseActivity() {
 
     private fun resetInputCharacters() {
         //Reset Include
-        val defaultCharsInclude: String = if (PlayerPreferences.isUsingCustomIncludeCharInputs(this)) {
-            PlayerPreferences.getCustomDefaultIncludePrefs(this).toString()
-        } else {
-            getString(R.string.defaultIncludeChars)
-        }
+        val defaultCharsInclude: String =
+            if (PlayerPreferences.isUsingCustomIncludeCharInputs(this)) {
+                PlayerPreferences.getCustomDefaultIncludePrefs(this).toString()
+            } else {
+                getString(R.string.defaultIncludeChars)
+            }
         usableSymbolsEditText.setText(defaultCharsInclude)
         PlayerPreferences.setLocalIncludeCharsPreferences(defaultCharsInclude, this)
         //Reset Exclude
-        val defaultCharsExclude: String = if (PlayerPreferences.isUsingCustomExcludeCharInputs(this)) {
-            PlayerPreferences.getCustomDefaultExcludePrefs(this).toString()
-        } else {
-            ""
-        }
+        val defaultCharsExclude: String =
+            if (PlayerPreferences.isUsingCustomExcludeCharInputs(this)) {
+                PlayerPreferences.getCustomDefaultExcludePrefs(this).toString()
+            } else {
+                ""
+            }
         excludeInput.setText(defaultCharsExclude)
         PlayerPreferences.setLocalExcludeCharsPreferences(defaultCharsExclude, this)
     }
@@ -116,7 +119,10 @@ class MainActivity : BaseActivity() {
             passwordAdapter?.notifyDataSetChanged()
         }
         dialog.show()
-        dialog.window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+        dialog.window?.setLayout(
+            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.WRAP_CONTENT
+        )
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -191,7 +197,9 @@ class MainActivity : BaseActivity() {
                         subPasswordBtn.isClickable = true
                     }
                 }
-                PlayerPreferences.setPasswordCountPreferences(passwordCountInput.text.toString().toInt(), this)
+                PlayerPreferences.setPasswordCountPreferences(
+                    passwordCountInput.text.toString().toInt(), this
+                )
             }
             if (PlayerPreferences.isAutoGeneratePasswordByChange(this)) {
                 changeOfUsableCharacter()
@@ -215,12 +223,17 @@ class MainActivity : BaseActivity() {
                         subLengthBtn.isClickable = true
                     }
                 }
-                PlayerPreferences.setPasswordLengthPreferences(passwordLengthEditText.text.toString().toInt(), this)
+                PlayerPreferences.setPasswordLengthPreferences(
+                    passwordLengthEditText.text.toString().toInt(), this
+                )
             }
             changeOfUsableCharacter()
         }
         usableSymbolsEditText.addTextChangedListener {
-            PlayerPreferences.setLocalIncludeCharsPreferences(usableSymbolsEditText.text.toString(), this)
+            PlayerPreferences.setLocalIncludeCharsPreferences(
+                usableSymbolsEditText.text.toString(),
+                this
+            )
             changeOfUsableCharacter()
         }
         includeLowerCaseCheck.setOnCheckedChangeListener { _, isChecked ->
@@ -284,7 +297,9 @@ class MainActivity : BaseActivity() {
         includeSymbolsCheck.isChecked = PlayerPreferences.isSymbolsIncludedPreferences(this)
         isDistinctCheck.isChecked = PlayerPreferences.isDistinctPreferences(this)
         excludeCheck.isChecked = PlayerPreferences.isExcludePreferences(this)
-        usableSymbolsEditText.setText(PlayerPreferences.getLocalIncludeCharsPreferences(this).toString())
+        usableSymbolsEditText.setText(
+            PlayerPreferences.getLocalIncludeCharsPreferences(this).toString()
+        )
         excludeInput.setText(PlayerPreferences.getLocalSetExcludePreferences(this).toString())
         passwordLengthEditText.setText(PlayerPreferences.getSetLength(this).toString())
         passwordCountInput.setText(PlayerPreferences.getSetPasswords(this).toString())
@@ -298,10 +313,18 @@ class MainActivity : BaseActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     private fun filterTextNumberInput(editText: EditText) {
-        if (editText.text.isNotEmpty() && editText.text.toString().toInt() == 0) {
-            editText.setText("1")
-            editText.setSelection(editText.text.length)
+        if (editText.text.isNotEmpty()) {
+            if (editText.text.toString().toInt() == 0) {
+                editText.setText("1")
+                editText.setSelection(editText.text.length)
+            } else if (PlayerPreferences.isLimitCountAndLength(this) && editText.text.toString()
+                    .toInt() > 50
+            ) {
+                editText.setText("50")
+                editText.setSelection(editText.text.length)
+            }
         }
     }
 
@@ -310,7 +333,8 @@ class MainActivity : BaseActivity() {
         for (s in passwords) {
             passwordsClipboard.append(s + "\n")
         }
-        val clipboard: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clipboard: ClipboardManager =
+            getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clip = ClipData.newPlainText(label.toString(), passwordsClipboard)
         clipboard.setPrimaryClip(clip)
         val toastText = when {
@@ -331,12 +355,20 @@ class MainActivity : BaseActivity() {
 
     private fun addLengthCounter(positive: Boolean) {
         if (positive) {
-            passwordLengthEditText.setText((passwordLengthEditText.text.toString().toInt() + 1).toString())
+            passwordLengthEditText.setText(
+                (passwordLengthEditText.text.toString().toInt() + 1).toString()
+            )
         } else {
-            passwordLengthEditText.setText((passwordLengthEditText.text.toString().toInt() - 1).toString())
+            passwordLengthEditText.setText(
+                (passwordLengthEditText.text.toString().toInt() - 1).toString()
+            )
         }
-        if (passwordLengthEditText.text.toString().toInt() < 1) passwordLengthEditText.setText(1.toString())
-        if (passwordLengthEditText.text.toString().toInt() >= Int.MAX_VALUE - 1) passwordLengthEditText.setText((Int.MAX_VALUE - 1).toString())
+        if (passwordLengthEditText.text.toString()
+                .toInt() < 1
+        ) passwordLengthEditText.setText(1.toString())
+        if (passwordLengthEditText.text.toString()
+                .toInt() >= Int.MAX_VALUE - 1
+        ) passwordLengthEditText.setText((Int.MAX_VALUE - 1).toString())
     }
 
     private fun addPasswordCounter(positive: Boolean) {
@@ -346,14 +378,38 @@ class MainActivity : BaseActivity() {
             passwordCountInput.setText((passwordCountInput.text.toString().toInt() - 1).toString())
         }
         if (passwordCountInput.text.toString().toInt() < 1) passwordCountInput.setText(1.toString())
-        if (passwordCountInput.text.toString().toInt() >= Int.MAX_VALUE - 1) passwordCountInput.setText((Int.MAX_VALUE - 1).toString())
-        PlayerPreferences.setPasswordCountPreferences(passwordCountInput.text.toString().toInt(), this)
+        if (passwordCountInput.text.toString()
+                .toInt() >= Int.MAX_VALUE - 1
+        ) passwordCountInput.setText((Int.MAX_VALUE - 1).toString())
+        PlayerPreferences.setPasswordCountPreferences(
+            passwordCountInput.text.toString().toInt(),
+            this
+        )
     }
 
     private fun changeOfUsableCharacter() {
-        usableCharacter = PasswordGenerator.getUsableCharacter(includeLowerCaseCheck.isChecked, includeUpperCaseCheck.isChecked, includeNumbersCheck.isChecked, spaceCheck.isChecked, includeSymbolsCheck.isChecked, getIncludeCharacter(), excludeCheck.isChecked, getExcludeCharacter(), getString(R.string.lowerCaseCharacter), getString(R.string.upperCaseCharacter))
-        if (checkIfGeneratePasswordIsPossible(isDistinctCheck.isChecked, getUserPasswordLength()) && PlayerPreferences.isAutoGeneratePasswordByChange(this)) {
-            generatePasswords(PlayerPreferences.getSetPasswords(this), PlayerPreferences.getSetLength(this), isDistinctCheck.isChecked)
+        usableCharacter = PasswordGenerator.getUsableCharacter(
+            includeLowerCaseCheck.isChecked,
+            includeUpperCaseCheck.isChecked,
+            includeNumbersCheck.isChecked,
+            spaceCheck.isChecked,
+            includeSymbolsCheck.isChecked,
+            getIncludeCharacter(),
+            excludeCheck.isChecked,
+            getExcludeCharacter(),
+            getString(R.string.lowerCaseCharacter),
+            getString(R.string.upperCaseCharacter)
+        )
+        if (checkIfGeneratePasswordIsPossible(
+                isDistinctCheck.isChecked,
+                getUserPasswordLength()
+            ) && PlayerPreferences.isAutoGeneratePasswordByChange(this)
+        ) {
+            generatePasswords(
+                PlayerPreferences.getSetPasswords(this),
+                PlayerPreferences.getSetLength(this),
+                isDistinctCheck.isChecked
+            )
 
         }
     }
@@ -423,7 +479,8 @@ class MainActivity : BaseActivity() {
         if (checkIfGeneratePasswordIsPossible(isDistinct, length)) {
             //Reference needs to be the same for Adapter
             passwords.addAll(
-                    PasswordGenerator.generatePasswords(amount, length, isDistinct, usableCharacter))
+                PasswordGenerator.generatePasswords(amount, length, isDistinct, usableCharacter)
+            )
             passwordAdapter?.notifyDataSetChanged()
             passwordListView.adapter = passwordAdapter
         }
