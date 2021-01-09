@@ -187,7 +187,15 @@ class MainActivity : BaseActivity() {
                         subPasswordBtn.isEnabled = false
                         subPasswordBtn.isClickable = false
                     }
-                    passwordCountInput.text.toString().toInt() >= Int.MAX_VALUE -> {
+                    passwordCountInput.text.toString()
+                        .toInt() >= Int.MAX_VALUE -> {
+                        addPasswordBtn.isEnabled = false
+                        addPasswordBtn.isClickable = false
+                    }
+                    passwordCountInput.text.toString()
+                        .toInt() >= LENGTH_COUNT_MAX_VALUE && PlayerPreferences.isLimitCountAndLength(
+                        this
+                    ) -> {
                         addPasswordBtn.isEnabled = false
                         addPasswordBtn.isClickable = false
                     }
@@ -218,7 +226,9 @@ class MainActivity : BaseActivity() {
                         addLengthBtn.isClickable = false
                     }
                     passwordLengthEditText.text.toString()
-                        .toInt() >= LENGTH_COUNT_MAX_VALUE -> {
+                        .toInt() >= LENGTH_COUNT_MAX_VALUE && PlayerPreferences.isLimitCountAndLength(
+                        this
+                    ) -> {
                         addLengthBtn.isEnabled = false
                         addLengthBtn.isClickable = false
                     }
