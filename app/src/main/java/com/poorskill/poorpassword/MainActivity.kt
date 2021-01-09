@@ -1,7 +1,6 @@
 package com.poorskill.poorpassword
 
 import android.R.attr.label
-import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
@@ -58,7 +57,7 @@ class MainActivity : BaseActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.action_menu, menu)
-        return true;
+        return true
     }
 
     override fun onRestart() {
@@ -310,7 +309,7 @@ class MainActivity : BaseActivity() {
         excludeInput.setText(PlayerPreferences.getLocalSetExcludePreferences(this).toString())
         passwordLengthEditText.setText(PlayerPreferences.getSetLength(this).toString())
         passwordCountInput.setText(PlayerPreferences.getSetPasswords(this).toString())
-        spaceCheck.isChecked = PlayerPreferences.isSpaceIncludedPreferences(this);
+        spaceCheck.isChecked = PlayerPreferences.isSpaceIncludedPreferences(this)
         excludeInput.isClickable = excludeCheck.isChecked
         excludeInput.isEnabled = excludeCheck.isChecked
         usableSymbolsEditText.isClickable = includeSymbolsCheck.isChecked
@@ -320,7 +319,6 @@ class MainActivity : BaseActivity() {
 
     }
 
-    @SuppressLint("SetTextI18n")
     private fun filterTextNumberInput(editText: EditText) {
         if (editText.text.isNotEmpty()) {
             if (editText.text.toString().toInt() == 0) {
@@ -442,7 +440,7 @@ class MainActivity : BaseActivity() {
         if (passwordLengthEditText.text.isNotEmpty()) {
             length = passwordLengthEditText.text.toString().toInt()
         }
-        return length;
+        return length
     }
 
     private fun getUserPasswordCount(): Int {
@@ -450,7 +448,7 @@ class MainActivity : BaseActivity() {
         if (passwordCountInput.text.isNotEmpty()) {
             amount = passwordCountInput.text.toString().toInt()
         }
-        return amount;
+        return amount
     }
 
     /**
