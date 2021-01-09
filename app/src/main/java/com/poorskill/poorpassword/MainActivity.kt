@@ -51,6 +51,8 @@ class MainActivity : BaseActivity() {
         private lateinit var passwordListView: ListView
 
         private var wasSettings = false
+
+        private const val LENGTH_COUNT_MAX_VALUE = 50
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -216,6 +218,11 @@ class MainActivity : BaseActivity() {
                         addLengthBtn.isEnabled = false
                         addLengthBtn.isClickable = false
                     }
+                    passwordLengthEditText.text.toString()
+                        .toInt() >= LENGTH_COUNT_MAX_VALUE -> {
+                        addLengthBtn.isEnabled = false
+                        addLengthBtn.isClickable = false
+                    }
                     else -> {
                         addLengthBtn.isEnabled = true
                         addLengthBtn.isClickable = true
@@ -320,9 +327,9 @@ class MainActivity : BaseActivity() {
                 editText.setText("1")
                 editText.setSelection(editText.text.length)
             } else if (PlayerPreferences.isLimitCountAndLength(this) && editText.text.toString()
-                    .toInt() > 50
+                    .toInt() > LENGTH_COUNT_MAX_VALUE
             ) {
-                editText.setText("50")
+                editText.setText(LENGTH_COUNT_MAX_VALUE.toString())
                 editText.setSelection(editText.text.length)
             }
         }
