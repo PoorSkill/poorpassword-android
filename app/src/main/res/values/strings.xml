@@ -78,6 +78,7 @@
     <string name="prefIsUpperCaseInCharsKey" translatable="false">prefIsUpperCaseInCharsKey</string>
     <string name="prefIsLowerCaseInCharsKey" translatable="false">prefIsLowerCaseInCharsKey</string>
     <string name="prefUseCustomExcludeCharKey" translatable="false">prefUseCustomExcludeCharKey</string>
+    <string name="prefLimitCountAndLengthKey" translatable="false">prefLimitCountAndLengthKey</string>
     <string name="helpItem">Help</string>
     <string name="application_header">Application</string>
     <string name="strengthVeryWeak">Very Weak</string>
@@ -91,6 +92,8 @@
     <string name="password_header">Password</string>
     <string name="languageKey" translatable="false">languageKey</string>
     <string name="languageTitle">Language</string>
+    <string name="preferencesLimitCountAndLengthTitle">Limit amount and length of passwords</string>
+    <string name="preferencesLimitCountAndLengthSummary">Prevents the user from using a high amount of passwords or length to prevent a crash (max is 50)</string>
 
     <string name="german">German</string>
     <string name="english">English</string>
@@ -152,7 +155,6 @@
 
     <string name="light">Light</string>
     <string name="dark">Dark</string>
-    <string name="preferencesLimitCountAndLengthTitle">Limit amount and length of passwords</string>
-    <string name="preferencesLimitCountAndLengthSummary">Prevents user of using high amount of passwords or length to prevent crash</string>
-    <string name="prefLimitCountAndLengthKey">prefLimitCountAndLengthKey</string>
+
+
 </resources>

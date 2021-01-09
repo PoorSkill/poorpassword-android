@@ -51,4 +51,6 @@
     <string name="dark">Dunkel</string>
     <string name="preferencesUseCustomExcludeCharactersAsDefaultSummary">Setzt die Standardzeichen auf die benutzerdefinierten Zeichen</string>
     <string name="preferencesUseCustomExcludeCharactersAsDefaultTitle">Benutzerdefinierte Ausnahmezeichen als Standard</string>
+    <string name="preferencesLimitCountAndLengthTitle">Begrenzt die Anzahl und Länge der Passwörter</string>
+    <string name="preferencesLimitCountAndLengthSummary">Verhindert, dass der Benutzer eine große Anzahl von Passwörtern oder langen verwendet, um einen Absturz zu verhindern (maximal 50)</string>
 </resources>
