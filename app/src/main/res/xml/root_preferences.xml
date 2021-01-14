@@ -10,6 +10,13 @@
             app:title="@string/appTheme"
             app:useSimpleSummaryProvider="true" />
 
+        <ListPreference
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="@string/languageKey"
+            app:title="@string/languageTitle"
+            app:useSimpleSummaryProvider="true" />
+
         <SwitchPreferenceCompat
             app:defaultValue="true"
             app:key="@string/prefLimitCountAndLengthKey"
