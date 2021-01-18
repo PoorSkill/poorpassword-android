@@ -6,7 +6,18 @@ class PasswordGenerator {
 
     companion object {
 
-        internal fun getUsableCharacter(includeLowerCase: Boolean, includeUpperCase: Boolean, includeNumbers: Boolean, includeSpace: Boolean, includeCustomCharacter: Boolean, customIncludeCharacter: String, excludeCustomCharacter: Boolean, customExcludeCharacter: String, lowerCaseCharacters: String, upperCaseCharacters: String): java.lang.StringBuilder {
+        internal fun getUsableCharacter(
+            includeLowerCase: Boolean,
+            includeUpperCase: Boolean,
+            includeNumbers: Boolean,
+            includeSpace: Boolean,
+            includeCustomCharacter: Boolean,
+            customIncludeCharacter: String,
+            excludeCustomCharacter: Boolean,
+            customExcludeCharacter: String,
+            lowerCaseCharacters: String,
+            upperCaseCharacters: String
+        ): java.lang.StringBuilder {
             val usableCharacter = StringBuilder()
             if (includeLowerCase) {
                 usableCharacter.append(lowerCaseCharacters)
@@ -26,27 +37,36 @@ class PasswordGenerator {
             }
 
             if (excludeCustomCharacter && customExcludeCharacter.isNotEmpty()) {
-                val excludedChars = StringBuilder()
                 for (c: Char in customExcludeCharacter) {
-                    excludedChars.setLength(0)
-                    excludedChars.append(
-                            excludedChars.filterNot { it == c })
+                    var lastIndex = usableCharacter.lastIndexOf(c)
+                    while (lastIndex > -1) {
+                        usableCharacter.deleteCharAt(lastIndex)
+                        lastIndex = usableCharacter.lastIndexOf(c)
+                    }
+
                 }
             }
-
             return usableCharacter
         }
 
-        internal fun generatePasswords(amount: Int, length: Int, isDistinct: Boolean, usableCharacter: StringBuilder): ArrayList<String> {
+        internal fun generatePasswords(
+            amount: Int,
+            length: Int,
+            isDistinct: Boolean,
+            usableCharacter: StringBuilder
+        ): ArrayList<String> {
             val passwordList = ArrayList<String>()
             for (x in 0 until amount) {
                 passwordList.add(generateNewPassword(length, isDistinct, usableCharacter))
             }
-            println("List"+passwordList.size)
             return passwordList
         }
 
-        private fun generateNewPassword(length: Int, isDistinct: Boolean, usableCharacter: StringBuilder): String {
+        private fun generateNewPassword(
+            length: Int,
+            isDistinct: Boolean,
+            usableCharacter: StringBuilder
+        ): String {
             if (length < 1) {
                 return ""
             }
