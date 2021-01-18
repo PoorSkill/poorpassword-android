@@ -1,4 +1,4 @@
-package com.poorskill.poorpassword
+package com.poorskill.poorpassword.utility
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ProgressBar
 import android.widget.TextView
+import com.poorskill.poorpassword.R
+import com.poorskill.poorpassword.ui.settings.PlayerPreferences
 
 class PasswordListAdapter(private val context: Context, private val arrayList: ArrayList<String>) :
     BaseAdapter() {

@@ -1,9 +1,10 @@
-package com.poorskill.poorpassword
+package com.poorskill.poorpassword.ui.settings
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import androidx.preference.PreferenceManager
+import com.poorskill.poorpassword.R
 import java.util.*
 
 

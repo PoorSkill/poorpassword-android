@@ -1,4 +1,4 @@
-package com.poorskill.poorpassword
+package com.poorskill.poorpassword.ui.base
 
 import android.R.attr.label
 import android.content.ClipData
@@ -15,6 +15,13 @@ import android.view.WindowManager
 import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.core.widget.addTextChangedListener
+import com.poorskill.poorpassword.ui.dialog.PasswordDetailDialog
+import com.poorskill.poorpassword.utility.PasswordGenerator
+import com.poorskill.poorpassword.utility.PasswordListAdapter
+import com.poorskill.poorpassword.R
+import com.poorskill.poorpassword.ui.about.AboutActivity
+import com.poorskill.poorpassword.ui.settings.PlayerPreferences
+import com.poorskill.poorpassword.ui.settings.SettingsActivity
 
 
 class MainActivity : BaseActivity() {

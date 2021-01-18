@@ -1,7 +1,9 @@
-package com.poorskill.poorpassword
+package com.poorskill.poorpassword.utility
 
 import android.content.Context
 import android.graphics.Color
+import com.poorskill.poorpassword.R
+import com.poorskill.poorpassword.ui.settings.PlayerPreferences
 import kotlin.math.log10
 
 object Utility {

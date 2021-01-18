@@ -1,4 +1,4 @@
-package com.poorskill.poorpassword
+package com.poorskill.poorpassword.ui.about
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -11,6 +11,8 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.poorskill.poorpassword.ui.base.BaseActivity
+import com.poorskill.poorpassword.R
 
 /**
  * About Page

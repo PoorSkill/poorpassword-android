@@ -1,4 +1,4 @@
-package com.poorskill.poorpassword
+package com.poorskill.poorpassword.utility
 
 import java.security.SecureRandom
 

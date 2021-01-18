@@ -1,4 +1,4 @@
-package com.poorskill.poorpassword
+package com.poorskill.poorpassword.ui.dialog
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -10,6 +10,9 @@ import android.os.Bundle
 import android.view.Window
 import android.widget.*
 import androidx.core.widget.addTextChangedListener
+import com.poorskill.poorpassword.R
+import com.poorskill.poorpassword.utility.Utility
+import com.poorskill.poorpassword.ui.settings.PlayerPreferences
 
 class PasswordDetailDialog(
         context: Context,
@@ -85,21 +88,26 @@ class PasswordDetailDialog(
 
     @SuppressLint("SetTextI18n")
     private fun updateDetailUI() {
-        val entropy = Utility.getPasswordEntropy(passwordsList[pos], context.getString(R.string.lowerCaseCharacter), context.getString(R.string.upperCaseCharacter), context.getString(R.string.numbersChars))
+        val entropy = Utility.getPasswordEntropy(
+            passwordsList[pos],
+            context.getString(R.string.lowerCaseCharacter),
+            context.getString(R.string.upperCaseCharacter),
+            context.getString(R.string.numbersChars)
+        )
         passwordProgressbar.progressDrawable.setColorFilter(
-                Utility.getPasswordStrengthAsColor(entropy, context),
+            Utility.getPasswordStrengthAsColor(entropy, context),
                 android.graphics.PorterDuff.Mode.SRC_IN
         )
         passwordProgressbar.progress = Utility.entropySecurityLevelAsPercent(
-                entropy,
-                PlayerPreferences.getMinBitForVeryStrong(context)
+            entropy,
+            PlayerPreferences.getMinBitForVeryStrong(context)
         )
         passwordStrength.text =
                 Utility.getPasswordStrengthAsString(
-                        entropy,
-                        context
+                    entropy,
+                    context
                 ) + context.getString(R.string.strengthBitStart) + entropy.toString() + context.getString(
-                        R.string.strengthBitEnd
+                    R.string.strengthBitEnd
                 )
     }
 

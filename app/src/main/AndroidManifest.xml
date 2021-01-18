@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/LightThemeBase">
         <activity
-            android:name=".SettingsActivity"
+            android:name=".ui.settings.SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.about.AboutActivity" />
+        <activity android:name=".ui.base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

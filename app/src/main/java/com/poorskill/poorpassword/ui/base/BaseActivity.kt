@@ -1,7 +1,8 @@
-package com.poorskill.poorpassword
+package com.poorskill.poorpassword.ui.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.poorskill.poorpassword.ui.settings.PlayerPreferences
 
 /**
  * BaseActivity - Parent of all Activities

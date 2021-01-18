@@ -8,7 +8,7 @@
         android:shortcutShortLabel="@string/generate_shortcut_short_label">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.poorskill.poorpassword.MainActivity"
+            android:targetClass="com.poorskill.poorpassword.ui.base.MainActivity"
             android:targetPackage="com.poorskill.poorpassword" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
@@ -23,7 +23,7 @@
         android:shortcutShortLabel="@string/settings_shortcut_short_label">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.poorskill.poorpassword.SettingsActivity"
+            android:targetClass="com.poorskill.poorpassword.ui.settings.SettingsActivity"
             android:targetPackage="com.poorskill.poorpassword" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>

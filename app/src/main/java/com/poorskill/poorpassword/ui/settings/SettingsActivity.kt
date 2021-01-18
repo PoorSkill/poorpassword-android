@@ -1,10 +1,11 @@
-package com.poorskill.poorpassword
+package com.poorskill.poorpassword.ui.settings
 
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
+import com.poorskill.poorpassword.ui.base.BaseActivity
+import com.poorskill.poorpassword.R
 
 
 class SettingsActivity : BaseActivity() {
